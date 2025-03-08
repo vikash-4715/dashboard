@@ -14,6 +14,12 @@ export default function Item(props){
             <td>
                 {props.user.name}
             </td>
+            <td>
+                {props.user.date}
+            </td>
+            <td>
+                {props.user.amount}
+            </td>
         </tr>
     )
 }
