@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import AuthLayout from "../components/AuthLayout";
 import Home from "../pages/home/Home"
 import Dashboard from "../pages/dashboard/Dashboard";
+import Details from "../pages/dashboard/Details";
 
 export default function Navigate() {
     return (
@@ -17,6 +18,7 @@ export default function Navigate() {
                 </Route>
                 <Route path="/" element={<Layout />}>
                     <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="details/:id" element={<Details />} />
                 </Route>
             </Routes>
         </BrowserRouter>

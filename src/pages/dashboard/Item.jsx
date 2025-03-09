@@ -1,24 +1,32 @@
-import { useEffect } from "react"
+import { Link } from "react-router-dom";
 
 export default function Item(props){
 
-    useEffect(()=>{
-
-    })
 
     return(
-        <tr>
+        <tr key={props?.user?.id}>
             <td>
-                {props.user.id}
+                { props?.user?.id ? props?.user?.id : '--'}
             </td>
             <td>
-                {props.user.name}
+                <Link to={`/details/${props?.user?.id}`}>
+                    { props?.user?.name ? props?.user?.name : '--'}
+                </Link>
             </td>
             <td>
-                {props.user.date}
+                { props?.user?.email ? props?.user?.email : '--'}
             </td>
             <td>
-                {props.user.amount}
+                { props?.user?.phone ? props?.user?.phone : '--'}
+            </td>
+            <td>
+                { props?.user?.website ? props?.user?.website : '--'}
+            </td>
+            <td>
+                {props.user.company.name}
+            </td>
+            <td>
+                {props.user.address.city}
             </td>
         </tr>
     )
